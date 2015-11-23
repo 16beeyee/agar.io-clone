@@ -328,13 +328,13 @@ io.on('connection', function (socket) {
         if (currentPlayer.admin) {
             var massAmount =  0;
             var worked = false;
-            if (datd.length === 1 && !worked) {
+            if (data.length === 1 && !worked) {
                 if (data <= 1000) {
                     massAmount = data[0];
                     currentPlayer.massTotal += massAmount;
                 }
                 console.log(currentPlayer.name + ' used massboost successfully');
-                socket.emit('serverMSG', currentPlayer.name ' used massboost successfully');
+                socket.emit('serverMSG', currentPlayer.name + ' used massboost successfully');
                 worked = true;
             }
             if (!worked) {
